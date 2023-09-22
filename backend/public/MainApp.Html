@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="http://localhost:8000/style">
+</head>
+<body onload="CheckUser()">
+    <div class="Main">
+        <div class="Recents-search">
+            <h1> Searchs Cities</h1>
+            <ul class="Recent-list" id="Main-list" >
+                <li id="listdata">
+                    <span class="text-recent">No Search</span>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <h1>Weather App</h1>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Enter city">
+                <button onclick="searchWeather()" class="button">Search</button>
+            </div>
+            <div class="weather-info" >
+                <p id="location"></p>
+                <p id="temperature"></p>
+                <p id="condition"></p>
+                <img src="Images/Screenshot 2023-09-22 170324.jpg" alt="icon" id="Images">
+            </div>
+           
+        </div>
+    
+    </div>
+    <script src="http://localhost:8000/script"></script>
+</body>
+</html>
