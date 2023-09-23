@@ -79,6 +79,11 @@ const {email,password}=req.body;
   const Query=`Select * From Users where email="${email}"`
   UserTable.query(Query,async(err,reslut)=>{
     if(err){
+      res.send({
+        operation:"Faild",
+        message:"Please Try Again",
+      
+       })
     }
     else{
       if(reslut.length>0){

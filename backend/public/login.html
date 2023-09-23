@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="icon" type="image/x-icon" href="./Images/WebFavicon/favicon.ico">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -57,7 +58,10 @@
             color: #ff0000;
             margin-top: 10px;
         }
-
+       .error{
+        text-align: center;
+        color: #ff0000;
+       }
         @media screen and (max-width: 600px) {
             .container {
                 max-width: 90%;
@@ -65,9 +69,9 @@
         }
     </style>
 </head>
-<body>
+<body onload="LoginCheck()">
     <div class="container">
-        <div class="error" id="error"></div>
+        <div class="error" id="Loginerror"></div>
 
         <h2>Login</h2>
             <label for="email">Email:</label>
@@ -77,8 +81,8 @@
             <input type="password" id="password" name="password" required>
             
             <button type="submit" onclick="Login()">Login</button>
-            <p class="message">Create an new Account <a href="http://localhost:8000/singUp">Singup</a></p>
+            <p class="message">Create an new Account <a onclick="ToSingUp()"  style="color: black;">Singup</a></p>
     </div>
 </body>
-<script src="http://localhost:8000/script"></script>
+<script src="/script"></script>
 </html>
