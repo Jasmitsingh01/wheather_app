@@ -8,7 +8,7 @@ const { v4: uuidv4 } = require('uuid');
 const { Console } = require("console");
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/Login.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
   
   app.get("/singUp", (req, res) => {
