@@ -24,7 +24,7 @@ body {
     display: flex;
     border-bottom: 2px solid lightgray;
     margin-top: 20px;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .Recents-search{
@@ -75,8 +75,8 @@ p {
 
 .Delete{
     background-color: rgb(255, 52, 52);
-    width: 30%;
-    font-size: large;
+    width: fit-content;
+    font-size: medium;
     border: none;
     border-radius: 5px;
     padding: 5px;
@@ -90,4 +90,32 @@ p {
 }
 .error{
     text-align: center;
+}
+
+@media screen and (max-width:768px){
+    .Main{
+        grid-template-columns:20% 1fr;
+    }
+    .Recents-search{
+        font-size: medium;
+    }
+    .text-recent{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .button{
+        padding: 10px;
+    }
+    .Recent-list li{
+        display: flex;
+        justify-content: left;
+        margin-left: -60px;
+    }
+}
+@media screen and (max-width:682px) {
+    .Recent-list li{
+        display: block;
+        margin-left: -40px;
+    }
+    
 }
